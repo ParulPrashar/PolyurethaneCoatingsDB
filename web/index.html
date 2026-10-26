@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Waterborne polyurethane coating properties</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="page">
+    <header class="masthead">
+      <h1>Waterborne polyurethane coating properties</h1>
+      <p class="lede" id="lede">Loading the database…</p>
+      <p class="notice">
+        <strong>Read this first.</strong>
+        Values come from the written text of open-access papers, so anything a paper reports only
+        in a table is missing. An AI model extracted them. “Verified” means the sentence quoted as
+        evidence was found in the paper and contains the value. Sample names and conditions are not
+        checked, so read the evidence before relying on a number.
+      </p>
+    </header>
+
+    <main>
+      <section aria-labelledby="explore-heading">
+        <h2 id="explore-heading">Explore a property</h2>
+
+        <div class="controls">
+          <label class="field">
+            <span class="field-label">Property</span>
+            <select id="property" disabled></select>
+          </label>
+          <label class="check">
+            <input type="checkbox" id="verified-only" checked>
+            <span>Verified values only</span>
+          </label>
+        </div>
+
+        <div id="message" class="message" role="status" hidden></div>
+
+        <div id="results" hidden>
+          <p id="result-count" class="result-count" aria-live="polite"></p>
+
+          <div class="panel plot-panel" id="plot-panel">
+            <p class="plot-caption">
+              Each dot is one value, and each row is one paper. Filled dots are verified,
+              hollow dots are not. Select a dot to jump to its evidence.
+            </p>
+            <div id="strip"></div>
+            <p id="strip-note" class="plot-note" hidden></p>
+          </div>
+
+          <div class="panel table-panel">
+            <div class="table-scroll">
+              <table>
+                <caption class="sr-only">Values for the selected property</caption>
+                <thead>
+                  <tr>
+                    <th scope="col">Sample</th>
+                    <th scope="col">Value</th>
+                    <th scope="col">Condition</th>
+                    <th scope="col">Paper</th>
+                    <th scope="col">Check</th>
+                    <th scope="col"><span class="sr-only">Evidence</span></th>
+                  </tr>
+                </thead>
+                <tbody id="results-body"></tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="papers-section" aria-labelledby="papers-heading">
+        <details id="papers">
+          <summary><h2 id="papers-heading">Papers in the database</h2></summary>
+          <ul id="papers-list" class="papers-list"></ul>
+        </details>
+      </section>
+    </main>
+
+    <footer class="footer" id="footer">
+      Papers come from Europe PMC. Open any paper link to check a value yourself.
+    </footer>
+  </div>
+</body>
+</html>

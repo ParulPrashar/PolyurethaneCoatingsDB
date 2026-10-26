@@ -1,0 +1,30 @@
+
+# API keys and environment secrets
+.env
+.env.*
+!.env.example
+plumberEnv
+
+# Python virtual environment
+venv/
+.venv/
+env/
+
+# Python cache files
+__pycache__/
+*.py[cod]
+
+# Generated research papers (adjust names to match your folders)
+extracted/
+llm_raw/
+papers/
+raw_xml/
+structured_json/
+
+# Temporary files
+*.log
+.DS_Store
+Thumbs.db
+
+# extra folders
+old/
