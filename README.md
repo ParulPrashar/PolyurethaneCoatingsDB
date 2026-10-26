@@ -7,8 +7,9 @@ sentence each value came from.
 ## How to run
 1. F_collectXML.py  //searches on Europe PMC
 <!-- 2. F_xmlToJSON.py   //converts extracted paper to JSON -->
-3. F_parsePapers.py //converts extracted paper to JSON
-4. F_extractProperties.py //gemini extracts properties
+2. F_parsePapers.py //converts extracted paper to JSON
+3. F_extractProperties.py //gemini extracts properties
+4. F_verify.py //verify records with what is mentioned in paper
 5. load_to_db.py //properties stored in DB
 6. app.py //website run
 
