@@ -132,17 +132,7 @@ The API only reads the database. It never changes it.
 - **Values like "over 30" are plotted at 30.** The table always shows the original text.
 - **Only five properties.** The prompt in `F_extractProperties.py` is where to add more, for
   example adhesion, hardness and gloss.
-- **Unit spelling** from the model varies, so the API tidies "degree" into "°" for display.
-  Other units are shown as the model wrote them.
 
-## Handing it over
-
-Suggested `.gitignore`:
-
-```
-.env
-PlumberEnv/
-__pycache__/
 ```
 
 Commit `extracted/` and `pu_coatings.db` so a reader can run the website without an API key.
